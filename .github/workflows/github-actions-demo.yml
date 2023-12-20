@@ -17,8 +17,11 @@ jobs:
     - name: Install dependencies
       run: cd backend && npm ci
 
+    - name: Lint
+      run: cd backend && npm run lint      
+
     - name: Build
       run: cd backend && npm run build
 
-    - name: Test
-      run: cd backend && npm test
+    - name: Unit Test
+      run: cd backend && npm test:unit
